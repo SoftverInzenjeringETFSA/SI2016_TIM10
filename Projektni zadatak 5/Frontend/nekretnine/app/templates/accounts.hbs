@@ -1,0 +1,11 @@
+<h2>accounts</h2>
+
+{{log model.accounts}}
+
+{{#each model.accounts as |account|}}
+<ul>
+<li><b>email: </b> {{account.eMail}}</li>
+<li><b>ime: </b> {{account.ime}}</li>
+<li><b>korisnicko ime: </b> {{account.korisnickoIme}}</li>
+</ul>
+{{/each}}
