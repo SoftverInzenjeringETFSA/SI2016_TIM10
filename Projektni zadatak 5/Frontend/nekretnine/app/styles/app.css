@@ -327,7 +327,7 @@ p {
 }
 
 .tomster {
-    background: url(../assets/images/NekretLogo.jpg);
+    /*background: url(../assets/images/NekretLogo.jpg); */
     background-size: contain;
     background-repeat: no-repeat;
     height: 200px;

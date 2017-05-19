@@ -5,34 +5,6 @@
   
 </div>
 
-<div class="pretraga">
-{{input value=value
-        class="light"
-        placeholder="Filter By City"}}
-</div>
 {{log model.rentals}}
 
-{{#each model.rentals as |rental|}}
-  <article class="listing">
-     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj4ue-oYth4ZCoCN2VmKnDsQXRSNvlLs9_LdgE6UWu3HWMfaTLW_aWUjle" alt="">
-    <h3>{{rental.nazivOglasa}}</h3>
-    <div class="detail owner">
-      <span>Owner:</span> {{rental.korisnik.ime}} 
-    </div>
-    <div class="detail type">
-      <span>Type:</span> {{rental.vrstaOglasa}}
-    </div>
-    <div class="detail location">
-      <span>Squares:</span> {{rental.kvadratura}}
-    </div>
-    <div class="detail bedrooms">
-      <span>Number of bedrooms:</span> {{rental.brojProstorija}}
-    </div>
-    <div class="detail location">
-      <span>Location:</span> {{rental.lokacija.adresa}}
-    </div>
-    <div class="detail location">
-      <span>Price:</span> {{rental.cijena}} BAM
-    </div>
-  </article>
-{{/each}}
+{{outlet}}
