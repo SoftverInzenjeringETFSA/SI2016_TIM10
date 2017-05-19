@@ -308,7 +308,8 @@ p {
 
 .light {
     font-weight: 300;
-}
+    width: 500px;
+  }
 
 .left {
     float: left;
@@ -327,7 +328,7 @@ p {
 }
 
 .tomster {
-    /*background: url(../assets/images/NekretLogo.jpg); */
+   /*background: url(https://image.prntscr.com/image/c8d909df2c9947f8933868664b4530a1.png); */
     background-size: contain;
     background-repeat: no-repeat;
     height: 200px;
