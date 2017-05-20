@@ -10,9 +10,8 @@
 {{#each model.rentals as |rental|}}
   <article class="listing">
      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj4ue-oYth4ZCoCN2VmKnDsQXRSNvlLs9_LdgE6UWu3HWMfaTLW_aWUjle" alt="">
-    
-    <h3>{{#link-to "rentals.show" rental}}{{rental.nazivOglasa}}{{/link-to}}</h3>
-    
+    <h3><a href="/rentals/{{rental.id}}" > {{rental.nazivOglasa}}</a> </h3>
+     
     <div class="detail owner">
       <span>Owner:</span> {{rental.korisnik.ime}} 
     </div>

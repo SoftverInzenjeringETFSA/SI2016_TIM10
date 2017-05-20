@@ -14,7 +14,7 @@ export default BaseService.extend({
 
     getById: function(id) {
         var account = Ember.Object.create({});
-        this.ajax({ url: "http://localhost:8080/korisnici/one/${id}", type: "GET"}).then(function(data) {
+        this.ajax({ url: "http://localhost:8080/korisnici/one/"+id, type: "GET"}).then(function(data) {
             account.setProperties(data);
         });        
 

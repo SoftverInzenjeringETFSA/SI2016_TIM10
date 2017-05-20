@@ -15,11 +15,10 @@ export default BaseService.extend({
 
     getById: function(id) {
         var rental = Ember.Object.create({});
-        this.ajax({ url: "http://localhost:8080/oglasi/one/${id}", type: "GET"}).then(function(data) {
+        this.ajax({ url: "http://localhost:8080/oglasi/one/"+id, type: "GET"}).then(function(data) {
         	console.log("data: ");
         	console.log(data);
-            
-        	console.log("created: ");
+          	console.log("created: ");
         	console.log(rental);
             rental.setProperties(data);
         });        
