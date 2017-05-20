@@ -1,0 +1,13 @@
+<h2>Profile</h2>
+
+{{log model.account}}
+
+<div class="jumbo">
+<h3>{{model.account.ime}} {{model.account.prezime}}</h3>
+<ul>
+<li><b>Email: </b> {{model.account.eMail}}</li>
+<li><b>Username: </b> {{model.account.korisnickoIme}}</li>
+</ul>
+<br>
+</div>
+{{outlet}}

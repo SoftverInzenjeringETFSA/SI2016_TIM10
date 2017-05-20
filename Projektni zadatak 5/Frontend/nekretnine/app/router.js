@@ -12,7 +12,9 @@ Router.map(function() {
   this.route('show', { path: '/:id' });  });
   this.route('login');
   this.route('register');
-  this.route('accounts');
+  this.route('accounts', function() {
+    this.route('show', { path: '/:id' });  });
+ 
 });
 
 export default Router;
