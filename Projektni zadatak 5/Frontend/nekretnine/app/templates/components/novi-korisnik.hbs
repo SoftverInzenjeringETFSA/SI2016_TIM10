@@ -17,21 +17,21 @@
 {{/each}}
 </div>
 <br>
-<div class="form-group {{if errors.username 'has-error'}}">
+<div class="form-group {{if errors.korisnickoIme 'has-error'}}">
 {{input class="form-control" value=korisnik.korisnickoIme placeholder="username"}}
 {{#each errors.korisnickoIme as |error|}}<br>
 <span class="help-block">{{error.message}}</span>
 {{/each}}
 </div>
 <br>
-<div class="form-group {{if errors.password 'has-error'}}">
+<div class="form-group {{if errors.sifra 'has-error'}}">
 {{input class="form-control" value=korisnik.sifra placeholder="password"}}
 {{#each errors.sifra as |error|}}<br>
 <span class="help-block">{{error.message}}</span>
 {{/each}}
 </div>
 <br>
-<div class="form-group {{if errors.email 'has-error'}}">
+<div class="form-group {{if errors.eMail 'has-error'}}">
 {{input class="form-control" value=korisnik.eMail placeholder="email"}}
 {{#each errors.eMail as |error|}}<br>
 <span  class="help-block">{{error.message}}</span>
