@@ -3,15 +3,10 @@ import DS from 'ember-data';
 
 
 export default Ember.Component.extend({
+accountService: Ember.inject.service(),
 	errors:DS.Errors.create(),
-	actions:{
-		submit:function(){
-			if(this.validate()){
-			this.sendAction('action',this.korisnik);
-
-		}
-		}
-	},
+	
+    
 	
 	validate: function(){
 		this.set('errors',DS.Errors.create());
@@ -33,5 +28,14 @@ export default Ember.Component.extend({
 		}
 		
 		return this.get('errors.isEmpty');
-	}
+	},
+    
+    actions:{
+		submit:function(){
+			if(this.validate()){
+            this.sendAction('action',this.korisnik);
+            
+            }
+		}
+	},
 });

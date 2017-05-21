@@ -1,6 +1,9 @@
 import Ember from 'ember';
 import DS from 'ember-data';
+
 export default Ember.Route.extend({
+accountService: Ember.inject.service(),
+    
 	model: function(){
 		return{ime:'',prezime:'',username:'',password:'',email:''};
 	},
@@ -9,10 +12,10 @@ export default Ember.Route.extend({
 	},
 	actions:{
 		createKorisnik:function(korisnik){
-console.log(korisnik);
-
-
-
+            console.log(korisnik);
+            this.get('accountService').register(korisnik);
+  
+            
 		}
 	}
 });
