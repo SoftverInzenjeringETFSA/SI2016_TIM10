@@ -23,6 +23,6 @@ export default BaseService.extend({
     
   register: function(data) {
         return this.ajax({ url: "http://localhost:8080/korisnici/create", type: "POST", data: JSON.stringify(data)})
-    },
+    }
 
 });

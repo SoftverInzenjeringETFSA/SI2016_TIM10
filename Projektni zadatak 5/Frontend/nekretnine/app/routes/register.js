@@ -5,7 +5,7 @@ export default Ember.Route.extend({
 accountService: Ember.inject.service(),
     
 	model: function(){
-		return{ime:'',prezime:'',username:'',password:'',email:''};
+		return{ime:'',prezime:'',korisnickoIme:'',sifra:'',eMail:''};
 	},
 	setupController:function(controller,model){
 		controller.set('korisnik',model);

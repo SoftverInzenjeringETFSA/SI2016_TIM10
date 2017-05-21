@@ -1,6 +1,6 @@
  <div class="container">
     <section class="register">
-<form {{action 'submit' on='submit'}}>
+<form >
 <div class="form-group {{if errors.ime 'has-error'}}">
 
 {{input class="form-control" value=korisnik.ime placeholder="Ime"}}
@@ -18,28 +18,28 @@
 </div>
 <br>
 <div class="form-group {{if errors.username 'has-error'}}">
-{{input class="form-control" value=korisnik.username placeholder="username"}}
-{{#each errors.username as |error|}}<br>
+{{input class="form-control" value=korisnik.korisnickoIme placeholder="username"}}
+{{#each errors.korisnickoIme as |error|}}<br>
 <span class="help-block">{{error.message}}</span>
 {{/each}}
 </div>
 <br>
 <div class="form-group {{if errors.password 'has-error'}}">
-{{input class="form-control" value=korisnik.password placeholder="password"}}
-{{#each errors.password as |error|}}<br>
+{{input class="form-control" value=korisnik.sifra placeholder="password"}}
+{{#each errors.sifra as |error|}}<br>
 <span class="help-block">{{error.message}}</span>
 {{/each}}
 </div>
 <br>
 <div class="form-group {{if errors.email 'has-error'}}">
-{{input class="form-control" value=korisnik.email placeholder="email"}}
-{{#each errors.email as |error|}}<br>
+{{input class="form-control" value=korisnik.eMail placeholder="email"}}
+{{#each errors.eMail as |error|}}<br>
 <span  class="help-block">{{error.message}}</span>
 {{/each}}
 </div>
 <br>
 
-<button class="btn" type="submit" >Registruj se</button>
+<button class="btn" type="button" {{action "submit"}}>Registruj se</button>
 </form>
 </section>
 

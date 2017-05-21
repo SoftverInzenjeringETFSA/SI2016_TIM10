@@ -17,23 +17,25 @@ accountService: Ember.inject.service(),
 		if(this.get('korisnik.prezime')==='' || this.get('korisnik.prezime')===undefined){
 			this.get('errors').add('prezime','Unesite prezime!!');
 		}
-		if(this.get('korisnik.username')==='' || this.get('korisnik.username')===undefined){
-			this.get('errors').add('username','Unesite username!!');
+		if(this.get('korisnik.korisnickoIme')==='' || this.get('korisnik.korisnickoIme')===undefined){
+			this.get('errors').add('korisnickoIme','Unesite username!!');
 		}
-		if(this.get('korisnik.password')==='' || this.get('korisnik.password')===undefined){
-			this.get('errors').add('password','Unesite password!!');
+		if(this.get('korisnik.sifra')==='' || this.get('korisnik.sifra')===undefined){
+			this.get('errors').add('sifra','Unesite password!!');
 		}
-		if(this.get('korisnik.email')==='' || this.get('korisnik.email')===undefined){
-			this.get('errors').add('email','Unesite email!!');
+		if(this.get('korisnik.email')==='' || this.get('korisnik.eMail')===undefined){
+			this.get('errors').add('eMail','Unesite email!!');
 		}
 		
 		return this.get('errors.isEmpty');
-	},
+	}, 
     
     actions:{
 		submit:function(){
-			if(this.validate()){
-            this.sendAction('action',this.korisnik);
+		if(this.validate()){
+        this.sendAction('action',this.korisnik);
+            console.log(this.korisnik);
+            //this.get('accountService').register(registerData);
             
             }
 		}
