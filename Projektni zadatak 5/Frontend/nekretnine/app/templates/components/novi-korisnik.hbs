@@ -1,0 +1,46 @@
+ <div class="container">
+    <section class="register">
+<form {{action 'submit' on='submit'}}>
+<div class="form-group {{if errors.ime 'has-error'}}">
+
+{{input class="form-control" value=korisnik.ime placeholder="Ime"}}
+{{#each errors.ime as |error|}}<br>
+<span class="help-block">{{error.message}}</span>
+{{/each}}
+</div>
+<br>
+
+<div class="form-group {{if errors.prezime 'has-error'}}">
+{{input class="form-control" value=korisnik.prezime placeholder="Prezime"}}
+{{#each errors.prezime as |error|}}<br>
+<span class="help-block">{{error.message}}</span>
+{{/each}}
+</div>
+<br>
+<div class="form-group {{if errors.username 'has-error'}}">
+{{input class="form-control" value=korisnik.username placeholder="username"}}
+{{#each errors.username as |error|}}<br>
+<span class="help-block">{{error.message}}</span>
+{{/each}}
+</div>
+<br>
+<div class="form-group {{if errors.password 'has-error'}}">
+{{input class="form-control" value=korisnik.password placeholder="password"}}
+{{#each errors.password as |error|}}<br>
+<span class="help-block">{{error.message}}</span>
+{{/each}}
+</div>
+<br>
+<div class="form-group {{if errors.email 'has-error'}}">
+{{input class="form-control" value=korisnik.email placeholder="email"}}
+{{#each errors.email as |error|}}<br>
+<span  class="help-block">{{error.message}}</span>
+{{/each}}
+</div>
+<br>
+
+<button class="btn" type="submit" >Registruj se</button>
+</form>
+</section>
+
+  </div>
