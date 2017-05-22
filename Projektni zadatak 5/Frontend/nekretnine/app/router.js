@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('register');
   this.route('accounts', function() {
     this.route('show', { path: '/:id' });  });
+  this.route('advertise');
  
 });
 

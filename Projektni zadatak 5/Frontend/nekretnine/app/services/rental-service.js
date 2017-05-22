@@ -7,10 +7,10 @@ export default BaseService.extend({
         var rentals = []; // ovdje prazan objekat
         this.ajax({ url: "http://localhost:8080/oglasi/all", type: "GET" }).then(function(data) {
             data.forEach(function(rental) {
-                rentals.addObject(rental); 
+                rentals.addObject(rental);
             });
-        });        
-        return rentals; 
+        });
+        return rentals;
     },
 
     getById: function(id) {
@@ -21,9 +21,11 @@ export default BaseService.extend({
           	console.log("created: ");
         	console.log(rental);
             rental.setProperties(data);
-        });        
+        });
 
         return rental;
     },
-
+  register: function(data) {
+    return this.ajax({ url: "http://localhost:8080/oglasi/create", type: "POST", data: JSON.stringify(data)})
+  }
 });

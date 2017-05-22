@@ -162,6 +162,27 @@ public class Oglas {
 	private Integer brojPregleda;
 	
 	private Boolean placen;
+
+	public String getAdresa() {
+		return adresa;
+	}
+
+	public void setAdresa(String adresa) {
+		this.adresa = adresa;
+	}
+
+
+	public String getGrad() {
+		return grad;
+	}
+
+	public void setGrad(String grad) {
+		this.grad = grad;
+	}
+
+	private String adresa;
+
+	private String grad;
 	
 	public Oglas ()	{}
 	
