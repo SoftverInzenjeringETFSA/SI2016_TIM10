@@ -5,7 +5,7 @@ export default Ember.Route.extend({
   rentalService: Ember.inject.service(),
 
   model: function(){
-    return{nazivOglasa:'',vrstaOglasa:'',vrstaNekretnine:'', adresa:'',grad:'',kvadratura:'',cijena:'',brojProstorija:'',brojSpratova:'',datumObjave:Date.now()};
+    return{nazivOglasa:'',vrstaOglasa:'',vrstaNekretnine:'', adresa:'',grad:'',kvadratura:'',cijena:'',brojProstorija:'',brojSpratova:'',datumObjave:Date.now(),slika:''};
   },
   setupController:function(controller,model){
     controller.set('oglas',model);

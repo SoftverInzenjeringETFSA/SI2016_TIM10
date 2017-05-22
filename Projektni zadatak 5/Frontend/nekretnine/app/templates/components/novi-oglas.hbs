@@ -58,7 +58,6 @@
 <span  class="help-block">{{error.message}}</span>
 {{/each}}
 </div>
-
 <br>
 <div class="form-group {{if errors.brojSpratova 'has-error'}}">
 {{input class="form-control" value=oglas.brojSpratova placeholder="Broj spratova"}}
@@ -66,6 +65,11 @@
 <span  class="help-block">{{error.message}}</span>
 {{/each}}
 </div>
+<br>
+<div class="form-group">
+{{input class="form-control" value=oglas.slika placeholder="Slika"}}
+</div>
+<br>
 <button class="btn" type="button" {{action "submit"}}>Objavi oglas</button>
 </form>
 </section>

@@ -183,7 +183,17 @@ public class Oglas {
 	private String adresa;
 
 	private String grad;
-	
+
+	private String slika;
+
+	public String getSlika() {
+		return slika;
+	}
+
+	public void setSlika(String slika) {
+		this.slika = slika;
+	}
+
 	public Oglas ()	{}
 	
 }

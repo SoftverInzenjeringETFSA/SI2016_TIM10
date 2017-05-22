@@ -30,8 +30,8 @@
       <file leaf-file-name="novi-oglas.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nekretnine/app/templates/components/novi-oglas.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="35" column="19" lean-forward="false" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+            <state relative-caret-position="585">
+              <caret line="69" column="65" lean-forward="false" selection-start-line="69" selection-start-column="65" selection-end-line="69" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -51,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/nekretnine/app/routes/advertise.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
-              <caret line="7" column="159" lean-forward="false" selection-start-line="7" selection-start-column="159" selection-end-line="7" selection-end-column="159" />
+              <caret line="7" column="167" lean-forward="false" selection-start-line="7" selection-start-column="167" selection-end-line="7" selection-end-column="167" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -72,8 +72,8 @@
       <file leaf-file-name="index.hbs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nekretnine/app/templates/rentals/index.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+            <state relative-caret-position="242">
+              <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -94,8 +94,8 @@
         <option value="$PROJECT_DIR$/nekretnine/app/templates/advertise.hbs" />
         <option value="$PROJECT_DIR$/nekretnine/app/router.js" />
         <option value="$PROJECT_DIR$/nekretnine/app/components/novi-oglas.js" />
-        <option value="$PROJECT_DIR$/nekretnine/app/templates/components/novi-oglas.hbs" />
         <option value="$PROJECT_DIR$/nekretnine/app/routes/advertise.js" />
+        <option value="$PROJECT_DIR$/nekretnine/app/templates/components/novi-oglas.hbs" />
         <option value="$PROJECT_DIR$/nekretnine/app/templates/rentals/index.hbs" />
       </list>
     </option>
@@ -793,12 +793,12 @@
       <option name="presentableId" value="Default" />
       <updated>1495477646343</updated>
       <workItem from="1495477647965" duration="1022000" />
-      <workItem from="1495479757838" duration="5589000" />
+      <workItem from="1495479757838" duration="6059000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6611000" />
+    <option name="totallyTimeSpent" value="7081000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1025,11 +1025,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nekretnine/app/templates/components/novi-oglas.hbs">
+    <entry file="file://$PROJECT_DIR$/nekretnine/app/templates/rentals.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="35" column="19" lean-forward="false" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nekretnine/app/routes/advertise.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="167" lean-forward="false" selection-start-line="7" selection-start-column="167" selection-end-line="7" selection-end-column="167" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1041,28 +1051,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nekretnine/app/routes/advertise.js">
+    <entry file="file://$PROJECT_DIR$/nekretnine/app/templates/components/novi-oglas.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="159" lean-forward="false" selection-start-line="7" selection-start-column="159" selection-end-line="7" selection-end-column="159" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nekretnine/app/templates/rentals.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="585">
+          <caret line="69" column="65" lean-forward="false" selection-start-line="69" selection-start-column="65" selection-end-line="69" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nekretnine/app/templates/rentals/index.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+        <state relative-caret-position="242">
+          <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
           <folding />
         </state>
       </provider>
