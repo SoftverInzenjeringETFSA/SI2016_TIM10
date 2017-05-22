@@ -1,0 +1,73 @@
+ <div class="container">
+    <section class="advertise">
+<form >
+<div class="form-group {{if errors.nazivOglasa 'has-error'}}">
+
+{{input class="form-control" value=oglas.nazivOglasa placeholder="Naziv"}}
+{{#each errors.nazivOglasa as |error|}}<br>
+<span class="help-block">{{error.message}}</span>
+{{/each}}
+</div>
+<br>
+
+<div class="form-group {{if errors.vrstaOglasa 'has-error'}}">
+{{input class="form-control" value=oglas.vrstaOglasa placeholder="Vrsta oglasa"}}
+{{#each errors.vrstaOglasa as |error|}}<br>
+<span class="help-block">{{error.message}}</span>
+{{/each}}
+</div>
+<br>
+<div class="form-group {{if errors.vrstaNekretnine 'has-error'}}">
+{{input class="form-control" value=oglas.vrstaNekretnine placeholder="Vrsta nekretnine"}}
+{{#each errors.vrstaNekretnine as |error|}}<br>
+<span class="help-block">{{error.message}}</span>
+{{/each}}
+</div>
+<br>
+<div class="form-group {{if errors.adresa 'has-error'}}">
+{{input class="form-control" value=oglas.adresa placeholder="Adresa"}}
+{{#each errors.adresa as |error|}}<br>
+<span class="help-block">{{error.message}}</span>
+{{/each}}
+</div>
+<br>
+<div class="form-group {{if errors.grad 'has-error'}}">
+{{input class="form-control" value=oglas.grad placeholder="Grad"}}
+{{#each errors.grad as |error|}}<br>
+<span class="help-block">{{error.message}}</span>
+{{/each}}
+</div>
+<br>
+<div class="form-group {{if errors.kvadratura 'has-error'}}">
+{{input class="form-control" value=oglas.kvadratura placeholder="Kvadratura"}}
+{{#each errors.kvadratura as |error|}}<br>
+<span  class="help-block">{{error.message}}</span>
+{{/each}}
+</div>
+<br>
+<div class="form-group {{if errors.cijena 'has-error'}}">
+{{input class="form-control" value=oglas.cijena placeholder="Cijena"}}
+{{#each errors.cijena as |error|}}<br>
+<span  class="help-block">{{error.message}}</span>
+{{/each}}
+</div>
+<br>
+<div class="form-group {{if errors.brojProstorija 'has-error'}}">
+{{input class="form-control" value=oglas.brojProstorija placeholder="Broj prostorija"}}
+{{#each errors.brojProstorija as |error|}}<br>
+<span  class="help-block">{{error.message}}</span>
+{{/each}}
+</div>
+
+<br>
+<div class="form-group {{if errors.brojSpratova 'has-error'}}">
+{{input class="form-control" value=oglas.brojSpratova placeholder="Broj spratova"}}
+{{#each errors.brojSpratova as |error|}}<br>
+<span  class="help-block">{{error.message}}</span>
+{{/each}}
+</div>
+<button class="btn" type="button" {{action "submit"}}>Objavi oglas</button>
+</form>
+</section>
+
+  </div>
