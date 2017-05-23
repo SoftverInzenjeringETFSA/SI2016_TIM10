@@ -2,7 +2,10 @@ package com.tim10.models;
 
 
 
+import com.tim10.repositories.OglasRepozitorij;
+
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -115,25 +118,25 @@ public class Oglas {
 	@Id
 	@GeneratedValue
 	private long id;
-	
+
 	private String nazivOglasa;
-	
+
 	private String vrstaOglasa;
-	
+
 	private String vrstaNekrenine;
-	
+
 	@OneToOne
 	private Korisnik korisnik;
-	
+
 	@OneToOne
 	private Lokacija lokacija;
-	
+
 	private Double kvadratura;
-	
+
 	private Double cijena;
-	
+
 	private Integer brojProstorija;
-	
+
 	public Korisnik getKorisnik() {
 		return korisnik;
 	}
@@ -151,16 +154,16 @@ public class Oglas {
 	}
 
 	private Integer brojSpratova;
-	
+
 	@Column(insertable = true)
 	@Temporal(TemporalType.TIMESTAMP)
 	@Basic(optional = false)
 	private Date datumObjave;
-	
+
 	private Boolean aktivan;
-	
+
 	private Integer brojPregleda;
-	
+
 	private Boolean placen;
 
 	public String getAdresa() {
@@ -194,6 +197,7 @@ public class Oglas {
 		this.slika = slika;
 	}
 
-	public Oglas ()	{}
-	
+	public Oglas() {
+	}
+
 }
