@@ -154,7 +154,7 @@ public class Oglas {
 	
 	@Column(insertable = true)
 	@Temporal(TemporalType.TIMESTAMP)
-	@Basic(optional = false)
+	@Basic(optional = true)
 	private Date datumObjave;
 	
 	private Boolean aktivan;
