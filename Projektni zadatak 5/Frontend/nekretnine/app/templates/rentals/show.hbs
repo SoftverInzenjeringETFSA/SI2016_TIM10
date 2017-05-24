@@ -1,7 +1,7 @@
 {{log model.rental}}
 <div class="jumbo">
   <h2>{{model.rental.nazivOglasa}}</h2>
-   
+
     <div class="detail owner">
       <span>Owner:</span> {{#link-to 'accounts.show' model.rental.korisnik.id}}{{model.rental.korisnik.ime}} {{/link-to}}
     </div>
@@ -15,7 +15,7 @@
       <span>Number of bedrooms:</span> {{model.rental.brojProstorija}}
     </div>
     <div class="detail location">
-      <span>Location:</span> {{model.rental.lokacija.adresa}}
+      <span>Location:</span> {{model.rental.grad}}, {{model.rental.adresa}}
     </div>
     <div class="detail location">
       <span>Price:</span> {{model.rental.cijena}} BAM

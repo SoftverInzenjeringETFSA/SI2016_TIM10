@@ -18,21 +18,21 @@
 </div>
 <br>
 <div class="form-group {{if errors.korisnickoIme 'has-error'}}">
-{{input class="form-control" value=korisnik.korisnickoIme placeholder="username"}}
+{{input class="form-control" value=korisnik.korisnickoIme placeholder="Username"}}
 {{#each errors.korisnickoIme as |error|}}<br>
 <span class="help-block">{{error.message}}</span>
 {{/each}}
 </div>
 <br>
 <div class="form-group {{if errors.sifra 'has-error'}}">
-{{input class="form-control" value=korisnik.sifra placeholder="password"}}
+{{input type="password" class="form-control" value=korisnik.sifra placeholder="Password"}}
 {{#each errors.sifra as |error|}}<br>
 <span class="help-block">{{error.message}}</span>
 {{/each}}
 </div>
 <br>
 <div class="form-group {{if errors.eMail 'has-error'}}">
-{{input class="form-control" value=korisnik.eMail placeholder="email"}}
+{{input class="form-control" value=korisnik.eMail placeholder="Email"}}
 {{#each errors.eMail as |error|}}<br>
 <span  class="help-block">{{error.message}}</span>
 {{/each}}

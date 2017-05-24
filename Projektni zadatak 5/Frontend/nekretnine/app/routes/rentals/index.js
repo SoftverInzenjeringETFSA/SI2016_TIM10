@@ -8,6 +8,10 @@ export default Ember.Route.extend({
   // je za resolveanje 'promise'-a koji su prica sama za sebe u JS
   // malo proguglaj poslije o cemu se tu radi, ugl svaki ajax poziv
   // moze
+	EmptyUrl: function() {
+  return this.get('rental.slika') === 'null';
+}.property('rental.slika'),
+
   model: function() {
     return Ember.RSVP.hash({
       rentals: this.get('rentalService').all()

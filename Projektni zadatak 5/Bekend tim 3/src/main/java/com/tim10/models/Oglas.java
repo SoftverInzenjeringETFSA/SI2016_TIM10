@@ -1,7 +1,14 @@
 package com.tim10.models;
 
 
+<<<<<<< HEAD
+=======
+
+import com.tim10.repositories.OglasRepozitorij;
+
+>>>>>>> d87d8f78b518ea25fcbed6fc5130a259e20b7aec
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -149,33 +156,60 @@ public class Oglas {
 	@Id
 	@GeneratedValue
 	private long id;
-	
+
 	private String nazivOglasa;
-	
+
 	private String vrstaOglasa;
-	
+
 	private String vrstaNekrenine;
-	
+
 	@OneToOne
 	private Korisnik korisnik;
+<<<<<<< HEAD
 	
+=======
+
+	@OneToOne
+	private Lokacija lokacija;
+
+>>>>>>> d87d8f78b518ea25fcbed6fc5130a259e20b7aec
 	private Double kvadratura;
-	
+
 	private Double cijena;
-	
+
 	private Integer brojProstorija;
+<<<<<<< HEAD
 	
+=======
+
+	public Korisnik getKorisnik() {
+		return korisnik;
+	}
+
+	public void setKorisnik(Korisnik korisnik) {
+		this.korisnik = korisnik;
+	}
+
+	public Lokacija getLokacija() {
+		return lokacija;
+	}
+
+	public void setLokacija(Lokacija lokacija) {
+		this.lokacija = lokacija;
+	}
+
+>>>>>>> d87d8f78b518ea25fcbed6fc5130a259e20b7aec
 	private Integer brojSpratova;
-	
+
 	@Column(insertable = true)
 	@Temporal(TemporalType.TIMESTAMP)
 	@Basic(optional = false)
 	private Date datumObjave;
-	
+
 	private Boolean aktivan;
-	
+
 	private Integer brojPregleda;
-	
+
 	private Boolean placen;
 	
 	private String adresa;
@@ -183,7 +217,23 @@ public class Oglas {
 	private String grad;
 
 	private String slika;
+<<<<<<< HEAD
 	
 	public Oglas ()	{}
 	
 }
+=======
+
+	public String getSlika() {
+		return slika;
+	}
+
+	public void setSlika(String slika) {
+		this.slika = slika;
+	}
+
+	public Oglas() {
+	}
+
+}
+>>>>>>> d87d8f78b518ea25fcbed6fc5130a259e20b7aec
