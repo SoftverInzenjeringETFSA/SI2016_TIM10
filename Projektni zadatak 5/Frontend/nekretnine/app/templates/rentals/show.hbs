@@ -1,10 +1,12 @@
 {{log model.rental}}
 <div class="jumbo">
   <h2>{{model.rental.nazivOglasa}}</h2>
+  {{#if session.isAuthenticated}}
 
     <div class="detail owner">
       <span>Owner:</span> {{#link-to 'accounts.show' model.rental.korisnik.id}}{{model.rental.korisnik.ime}} {{/link-to}}
     </div>
+{{/if}}
     <div class="detail type">
       <span>Type:</span> {{model.rental.vrstaOglasa}}
     </div>

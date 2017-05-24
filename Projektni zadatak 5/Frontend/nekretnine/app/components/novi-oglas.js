@@ -5,8 +5,7 @@ import DS from 'ember-data';
 export default Ember.Component.extend({
     accountService: Ember.inject.service(),
     errors:DS.Errors.create(),
-
-
+    session: Ember.inject.service(),
 
     validate: function(){
         this.set('errors',DS.Errors.create());

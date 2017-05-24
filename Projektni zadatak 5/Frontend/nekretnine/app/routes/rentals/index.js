@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+
 	rentalService: Ember.inject.service(), // ovo automatski injecta onaj ranije kreirani accountService
 
   // ovo u template stavlja one modele koje si ondje navela u rentals rutu,

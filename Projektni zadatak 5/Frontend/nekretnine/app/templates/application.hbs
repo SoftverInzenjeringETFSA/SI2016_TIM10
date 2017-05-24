@@ -13,9 +13,6 @@
       {{#link-to 'accounts'}}
         Accounts
       {{/link-to}}
-      {{#link-to 'advertise'}}
-              Advertise
-      {{/link-to}}
 
       {{#link-to 'register'}}
               Register
@@ -24,6 +21,9 @@
       {{#if session.isAuthenticated}}
             <a href="#" {{action "logout" }}> Logout</a>
           <a href="#">{{ session.data.authenticated.korisnik.korisnickoIme }} </a>
+      {{#link-to 'advertise'}}
+                  Advertise
+      {{/link-to}}
       {{else}}
 
       {{#link-to 'login'}}
