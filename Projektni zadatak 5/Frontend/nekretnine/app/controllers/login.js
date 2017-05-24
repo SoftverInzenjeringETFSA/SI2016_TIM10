@@ -12,7 +12,8 @@ export default Ember.Controller.extend({
                     console.log(data);
                     Ember.set(this, 'errorMessage', '');
                     Ember.set(this, 'model', {});
-                    this.transitionToRoute('rentals');
+                    console.log(data.korisnik.id);
+                    this.transitionToRoute('/accounts/'+data.korisnik.id);
                 })
                 .catch(reason => {
                     Ember.set(this, 'errorMessage', JSON.parse(reason.responseText).errorMessage);

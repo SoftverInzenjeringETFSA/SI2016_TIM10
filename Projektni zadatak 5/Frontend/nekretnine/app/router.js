@@ -15,7 +15,8 @@ Router.map(function() {
   this.route('accounts', function() {
     this.route('show', { path: '/:id' });  });
   this.route('advertise');
- 
+
+  this.route('profile');
 });
 
 export default Router;

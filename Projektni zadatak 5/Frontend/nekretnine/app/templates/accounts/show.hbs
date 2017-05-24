@@ -1,3 +1,4 @@
+  {{#if session.isAuthenticated}}
 <h2>Profile</h2>
 
 {{log model.account}}
@@ -11,3 +12,4 @@
 <br>
 </div>
 {{outlet}}
+{{/if}}
