@@ -9,19 +9,27 @@
       {{#link-to 'about'}}
         About
       {{/link-to}}
-      {{#link-to 'login'}}
-        Login
-      {{/link-to}}
-      {{#link-to 'register'}}
-        Register
-      {{/link-to}}
 
       {{#link-to 'accounts'}}
         Accounts
       {{/link-to}}
       {{#link-to 'advertise'}}
               Advertise
-            {{/link-to}}
+      {{/link-to}}
+
+      {{#link-to 'register'}}
+              Register
+      {{/link-to}}
+
+      {{#if session.isAuthenticated}}
+            <a href="#" {{action "logout" }}> Logout</a>
+          <a href="#">{{ session.data.authenticated.korisnik.korisnickoIme }} </a>
+      {{else}}
+
+      {{#link-to 'login'}}
+              Login
+      {{/link-to}}
+      {{/if}}
     </div>
   </div>
 

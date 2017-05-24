@@ -1,8 +1,6 @@
 package com.tim10.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Korisnik {
@@ -69,7 +67,28 @@ public class Korisnik {
 	private String korisnickoIme;
 	
 	private String sifra;
-	
+
+	private boolean isVerified;
+
+	@OneToOne(targetEntity = Role.class)
+	@JoinColumn(name = "role_id")
+	private Role roleId;
+
+	public Role getRoleId() {
+		return roleId;
+	}
+
+	public void setRoleId(Role roleId) {
+		this.roleId = roleId;
+	}
+
+	public boolean isVerified() {
+		return isVerified;
+	}
+
+	public void setVerified(boolean isVerified) {
+		this.isVerified = true;
+	}
 	public Korisnik ()	{}
 	
 	

@@ -221,6 +221,7 @@ p {
     float: left;
     margin-right: 45px;
     border-radius: 5px;
+    width: 150px;
 }
 
 .listing a.image.wide {
@@ -397,7 +398,7 @@ p {
   margin: 20px 0;
   font-size: 11px;
   text-align: center;
- 
+
   color:#FFFFFF;
 }
 .register-help a {
