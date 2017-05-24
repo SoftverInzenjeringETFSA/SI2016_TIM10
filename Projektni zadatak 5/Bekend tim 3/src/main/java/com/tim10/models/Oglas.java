@@ -1,7 +1,6 @@
 package com.tim10.models;
 
 
-
 import java.util.Date;
 
 import javax.persistence.Basic;
@@ -112,27 +111,6 @@ public class Oglas {
 		this.placen = placen;
 	}
 
-	@Id
-	@GeneratedValue
-	private long id;
-	
-	private String nazivOglasa;
-	
-	private String vrstaOglasa;
-	
-	private String vrstaNekrenine;
-	
-	@OneToOne
-	private Korisnik korisnik;
-	
-	@OneToOne
-	private Lokacija lokacija;
-	
-	private Double kvadratura;
-	
-	private Double cijena;
-	
-	private Integer brojProstorija;
 	
 	public Korisnik getKorisnik() {
 		return korisnik;
@@ -142,26 +120,6 @@ public class Oglas {
 		this.korisnik = korisnik;
 	}
 
-	public Lokacija getLokacija() {
-		return lokacija;
-	}
-
-	public void setLokacija(Lokacija lokacija) {
-		this.lokacija = lokacija;
-	}
-
-	private Integer brojSpratova;
-	
-	@Column(insertable = true)
-	@Temporal(TemporalType.TIMESTAMP)
-	@Basic(optional = false)
-	private Date datumObjave;
-	
-	private Boolean aktivan;
-	
-	private Integer brojPregleda;
-	
-	private Boolean placen;
 
 	public String getAdresa() {
 		return adresa;
@@ -180,12 +138,6 @@ public class Oglas {
 		this.grad = grad;
 	}
 
-	private String adresa;
-
-	private String grad;
-
-	private String slika;
-
 	public String getSlika() {
 		return slika;
 	}
@@ -194,6 +146,44 @@ public class Oglas {
 		this.slika = slika;
 	}
 
+	@Id
+	@GeneratedValue
+	private long id;
+	
+	private String nazivOglasa;
+	
+	private String vrstaOglasa;
+	
+	private String vrstaNekrenine;
+	
+	@OneToOne
+	private Korisnik korisnik;
+	
+	private Double kvadratura;
+	
+	private Double cijena;
+	
+	private Integer brojProstorija;
+	
+	private Integer brojSpratova;
+	
+	@Column(insertable = true)
+	@Temporal(TemporalType.TIMESTAMP)
+	@Basic(optional = false)
+	private Date datumObjave;
+	
+	private Boolean aktivan;
+	
+	private Integer brojPregleda;
+	
+	private Boolean placen;
+	
+	private String adresa;
+
+	private String grad;
+
+	private String slika;
+	
 	public Oglas ()	{}
 	
 }
