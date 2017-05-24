@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="JavaScriptLibraryMappings">
-    <includedPredefinedLibrary name="ECMAScript 6" />
-    <excludedPredefinedLibrary name="Frontend/nekretnine/tmp/funnel-output_path-Dzxcbfs3.tmp/vendor/node_modules" />
-  </component>
-</project>

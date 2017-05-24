@@ -1,9 +1,12 @@
 package com.tim10.models;
 
 
+<<<<<<< HEAD
+=======
 
 import com.tim10.repositories.OglasRepozitorij;
 
+>>>>>>> d87d8f78b518ea25fcbed6fc5130a259e20b7aec
 import java.util.Date;
 import java.util.List;
 
@@ -115,28 +118,7 @@ public class Oglas {
 		this.placen = placen;
 	}
 
-	@Id
-	@GeneratedValue
-	private long id;
-
-	private String nazivOglasa;
-
-	private String vrstaOglasa;
-
-	private String vrstaNekrenine;
-
-	@OneToOne
-	private Korisnik korisnik;
-
-	@OneToOne
-	private Lokacija lokacija;
-
-	private Double kvadratura;
-
-	private Double cijena;
-
-	private Integer brojProstorija;
-
+	
 	public Korisnik getKorisnik() {
 		return korisnik;
 	}
@@ -145,26 +127,6 @@ public class Oglas {
 		this.korisnik = korisnik;
 	}
 
-	public Lokacija getLokacija() {
-		return lokacija;
-	}
-
-	public void setLokacija(Lokacija lokacija) {
-		this.lokacija = lokacija;
-	}
-
-	private Integer brojSpratova;
-
-	@Column(insertable = true)
-	@Temporal(TemporalType.TIMESTAMP)
-	@Basic(optional = false)
-	private Date datumObjave;
-
-	private Boolean aktivan;
-
-	private Integer brojPregleda;
-
-	private Boolean placen;
 
 	public String getAdresa() {
 		return adresa;
@@ -183,11 +145,84 @@ public class Oglas {
 		this.grad = grad;
 	}
 
+	public String getSlika() {
+		return slika;
+	}
+
+	public void setSlika(String slika) {
+		this.slika = slika;
+	}
+
+	@Id
+	@GeneratedValue
+	private long id;
+
+	private String nazivOglasa;
+
+	private String vrstaOglasa;
+
+	private String vrstaNekrenine;
+
+	@OneToOne
+	private Korisnik korisnik;
+<<<<<<< HEAD
+	
+=======
+
+	@OneToOne
+	private Lokacija lokacija;
+
+>>>>>>> d87d8f78b518ea25fcbed6fc5130a259e20b7aec
+	private Double kvadratura;
+
+	private Double cijena;
+
+	private Integer brojProstorija;
+<<<<<<< HEAD
+	
+=======
+
+	public Korisnik getKorisnik() {
+		return korisnik;
+	}
+
+	public void setKorisnik(Korisnik korisnik) {
+		this.korisnik = korisnik;
+	}
+
+	public Lokacija getLokacija() {
+		return lokacija;
+	}
+
+	public void setLokacija(Lokacija lokacija) {
+		this.lokacija = lokacija;
+	}
+
+>>>>>>> d87d8f78b518ea25fcbed6fc5130a259e20b7aec
+	private Integer brojSpratova;
+
+	@Column(insertable = true)
+	@Temporal(TemporalType.TIMESTAMP)
+	@Basic(optional = false)
+	private Date datumObjave;
+
+	private Boolean aktivan;
+
+	private Integer brojPregleda;
+
+	private Boolean placen;
+	
 	private String adresa;
 
 	private String grad;
 
 	private String slika;
+<<<<<<< HEAD
+	
+	public Oglas ()	{}
+	
+}
+=======
 
 	public String getSlika() {
 		return slika;
@@ -201,3 +236,4 @@ public class Oglas {
 	}
 
 }
+>>>>>>> d87d8f78b518ea25fcbed6fc5130a259e20b7aec

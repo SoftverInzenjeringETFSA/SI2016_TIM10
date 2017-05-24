@@ -54,6 +54,32 @@ public class Korisnik {
 		this.sifra = sifra;
 	}
 	
+
+	public Boolean getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(Boolean admin) {
+		this.admin = admin;
+	}
+
+	public Boolean getPravoObjave() {
+		return pravoObjave;
+	}
+
+	public void setPravoObjave(Boolean pravoObjave) {
+		this.pravoObjave = pravoObjave;
+	}
+
+	public Integer getBrojObjava() {
+		return brojObjava;
+	}
+
+	public void setBrojObjava(Integer brojObjava) {
+		this.brojObjava = brojObjava;
+	}
+
+
 	@Id
 	@GeneratedValue
 	private long id;
@@ -89,6 +115,13 @@ public class Korisnik {
 	public void setVerified(boolean isVerified) {
 		this.isVerified = true;
 	}
+
+	private Boolean admin;
+
+	private Boolean pravoObjave;
+
+	private Integer brojObjava;
+
 	public Korisnik ()	{}
 	
 	
