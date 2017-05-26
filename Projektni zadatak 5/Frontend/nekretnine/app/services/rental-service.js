@@ -37,6 +37,10 @@ export default BaseService.extend({
             });
         });
         return rentals;
+    },
+
+    deleteOglasibyID: function(id){
+        return this.ajax({ url: "http://localhost:8080/oglasi/deleteOglasi?id="+id, type: "POST"})
     }
 
 });

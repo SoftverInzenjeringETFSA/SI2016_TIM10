@@ -3,6 +3,8 @@
 <h1>Welcome {{ session.data.authenticated.korisnik.korisnickoIme }} !</h1>
 <br>
 {{#link-to 'advertise' tagName='button' class="btn btn-primary"}} Objavi novi oglas{{/link-to}}
+<br> <br>
+<a  href="" class="btn btn-primary" {{action 'deleteProfile'}}>Obrisi profil</a>
 </div>
 <br>
 <div class="jumbo">

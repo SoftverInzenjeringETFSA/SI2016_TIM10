@@ -23,4 +23,9 @@
     <div class="detail location">
       <span>Price:</span> {{model.rental.cijena}} BAM
     </div>
+    <br>
+    {{#if (is-equal model.rental.id session.data.authenticated.korisnik.id)}}
+    <button  class="btn btn-primary" {{action ''}}>Obrisi oglas</button>
+    {{/if}}
+
    </div>

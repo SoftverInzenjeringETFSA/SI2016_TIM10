@@ -28,6 +28,10 @@ export default BaseService.extend({
   login: function(data) {
       console.log(data);
     return this.ajax({url: "http://localhost:8080/korisnici/login", type: "POST", data: JSON.stringify(data)})
+  },
+
+  deletebyID: function(id){
+      return this.ajax({ url: "http://localhost:8080/korisnici/delete/"+id, type: "POST"})
   }
 
 });
