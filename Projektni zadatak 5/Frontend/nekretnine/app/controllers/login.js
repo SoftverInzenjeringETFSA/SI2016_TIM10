@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
                     Ember.set(this, 'errorMessage', '');
                     Ember.set(this, 'model', {});
                     console.log(data.korisnik.id);
-                    this.transitionToRoute('/accounts/'+data.korisnik.id);
+                    this.transitionToRoute('profile');
                 })
                 .catch(reason => {
                     Ember.set(this, 'errorMessage', JSON.parse(reason.responseText).errorMessage);
@@ -21,4 +21,5 @@ export default Ember.Controller.extend({
 			    });
         }
     }
+
 });

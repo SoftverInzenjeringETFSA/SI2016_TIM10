@@ -3,9 +3,9 @@ import DS from 'ember-data';
 
 export default Ember.Route.extend({
 accountService: Ember.inject.service(),
-    
+
 	model: function(){
-		return{ime:'',prezime:'',korisnickoIme:'',sifra:'',eMail:''};
+		return{ime:'',prezime:'',korisnickoIme:'',sifra:'',eMail:'', roleId:{id:'1',roleName:'korisnik'}};
 	},
 	setupController:function(controller,model){
 		controller.set('korisnik',model);
@@ -14,8 +14,8 @@ accountService: Ember.inject.service(),
 		createKorisnik:function(korisnik){
             console.log(korisnik);
             this.get('accountService').register(korisnik);
-  
-            
+
+
 		}
 	}
 });

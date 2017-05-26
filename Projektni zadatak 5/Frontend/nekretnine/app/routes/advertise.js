@@ -7,7 +7,8 @@ export default Ember.Route.extend({
 
 
   model: function(){
-    return{nazivOglasa:'',vrstaOglasa:'',vrstaNekretnine:'', adresa:'',grad:'',kvadratura:'',cijena:'',brojProstorija:'',brojSpratova:'',datumObjave:Date.now(),slika:''};
+    console.log(this.get('session.data.authenticated.korisnik.id'));
+  return{korisnik:this.get('session.data.authenticated.korisnik'),nazivOglasa:'',vrstaOglasa:'',vrstaNekretnine:'', adresa:'',grad:'',kvadratura:'',cijena:'',brojProstorija:'',brojSpratova:'',datumObjave:Date.now(),slika:''};
   },
   setupController:function(controller,model){
     controller.set('oglas',model);

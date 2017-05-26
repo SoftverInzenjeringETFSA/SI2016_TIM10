@@ -27,5 +27,16 @@ export default BaseService.extend({
     },
   register: function(data) {
     return this.ajax({ url: "http://localhost:8080/oglasi/create", type: "POST", data: JSON.stringify(data)})
-  }
+  },
+
+  getOglasibyUserid: function(id) {
+        var rentals = [];
+        this.ajax({ url: "http://localhost:8080/oglasi/allOglasiKorisnik?id="+id, type: "GET" }).then(function(data) {
+            data.forEach(function(rental) {
+                rentals.addObject(rental);
+            });
+        });
+        return rentals;
+    }
+
 });
