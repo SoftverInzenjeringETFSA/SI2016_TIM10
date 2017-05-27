@@ -1,15 +1,21 @@
 {{#if session.isAuthenticated}}
 <div class="jumbo">
 <h1>Welcome {{ session.data.authenticated.korisnik.korisnickoIme }} !</h1>
+{{log model.brojOglasa}}
 <br>
+{{#if (lte model.brojOglasa.broj 2)}}
 {{#link-to 'advertise' tagName='button' class="btn btn-primary"}} Objavi novi oglas{{/link-to}}
+{{else}}
+<h5>Objavili ste vec tri besplatna oglasa</h5>
+{{/if}}
 <br> <br>
 <a  href="" class="btn btn-primary" {{action 'deleteProfile'}}>Obrisi profil</a>
 </div>
 <br>
 <div class="jumbo">
   <h1>Moji oglasi</h1>
-  
+
+  <h4> {{model.brojOglasa.broj}} </h4>
   {{log model.rentals}}
     {{#if model.rentals}}
   {{#each model.rentals as |rental|}}

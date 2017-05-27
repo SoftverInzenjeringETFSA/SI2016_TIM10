@@ -45,15 +45,13 @@ export default BaseService.extend({
 
 //nece ne znam ovo popraviti, nece da mi objekat kreira vec class
     getBrojOglasaKorisnika:function(id){
-
+        var brojOglasa=Ember.Object.create();
         this.ajax({ url: "http://localhost:8080/oglasi/brojOglasa?id="+id, type: "GET"}).then(function(data) {
         console.log("data: ");
         console.log(data);
-        var brojOglasa;
           console.log("created: ");
-          brojOglasa=data;
+          brojOglasa.set("broj" ,data);
           console.log(brojOglasa);
-
       });
       return brojOglasa;
     }

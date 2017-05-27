@@ -14,6 +14,7 @@ export default Ember.Route.extend({
     controller.set('oglas',model);
   },
   actions:{
+      
     createOglas:function(oglas){
       console.log(oglas);
 

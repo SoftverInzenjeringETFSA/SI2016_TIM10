@@ -4,12 +4,14 @@ export default Ember.Route.extend({
   rentalService: Ember.inject.service(),
   session: Ember.inject.service(),
   accountService: Ember.inject.service(),
+
   model: function() {
-  //  let bO =this.get('rentalService').getBrojOglasaKorisnika(this.get('session.data.authenticated.korisnik.id'));
+  let bO =this.get('rentalService').getBrojOglasaKorisnika(this.get('session.data.authenticated.korisnik.id'));
 
     console.log(this.get('session.data.authenticated.korisnik.id'));
      return Ember.RSVP.hash({
          rentals: this.get('rentalService').getOglasibyUserid(this.get('session.data.authenticated.korisnik.id')),
+         brojOglasa: bO
 
      });
  },
@@ -27,6 +29,9 @@ export default Ember.Route.extend({
 
 }
 
+ },
+ provjera: function(){
+   console.log('dgfgdf');
  }
  }
 });
