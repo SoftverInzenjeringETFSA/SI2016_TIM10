@@ -28,6 +28,18 @@ public class OglasController extends BaseRestController<Oglas, OglasRepozitorij>
     }
 
     @CrossOrigin
+    @GetMapping(path="/pretragaNaziv")
+    public @ResponseBody List<Oglas> pretragaNaziv(@RequestParam("id") String id) {
+        return oglasRepozitorij.findAllByRentalName(id);
+    }
+
+    @CrossOrigin
+    @GetMapping(path="/brojOglasa")
+    public @ResponseBody Integer brojOglasa(@RequestParam("id") Long id) {
+        return oglasRepozitorij.CountUserRentals(id);
+    }
+
+    @CrossOrigin
     @RequestMapping(path="/deleteOglasi", method = RequestMethod.POST)
     public @ResponseBody Integer deleteOglasi (@RequestParam("id") Long id) {
         if (id == null) return 0;

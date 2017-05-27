@@ -5,9 +5,9 @@ import DS from 'ember-data';
 export default Ember.Component.extend({
 accountService: Ember.inject.service(),
 	errors:DS.Errors.create(),
-	
-    
-	
+
+
+
 	validate: function(){
 		this.set('errors',DS.Errors.create());
 
@@ -26,18 +26,22 @@ accountService: Ember.inject.service(),
 		if(this.get('korisnik.email')==='' || this.get('korisnik.eMail')===undefined){
 			this.get('errors').add('eMail','Unesite email!!');
 		}
-		
+
 		return this.get('errors.isEmpty');
-	}, 
-    
+	},
+
     actions:{
 		submit:function(){
 		if(this.validate()){
         this.sendAction('action',this.korisnik);
             console.log(this.korisnik);
+					alert("Kreiran racun!");
+					this.set('korisnik', '');
+
             //this.get('accountService').register(registerData);
-            
+
             }
+						
 		}
 	},
 });

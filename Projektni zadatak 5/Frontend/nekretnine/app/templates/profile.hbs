@@ -9,8 +9,11 @@
 <br>
 <div class="jumbo">
   <h1>Moji oglasi</h1>
+  
   {{log model.rentals}}
+    {{#if model.rentals}}
   {{#each model.rentals as |rental|}}
+
     <article class="listing">
     {{#if rental.slika }}
       <img src="{{rental.slika}}" alt="">
@@ -40,6 +43,10 @@
         <span>Price:</span> {{rental.cijena}} BAM
       </div>
       </article>
+
   {{/each}}
+  {{else}}
+  <h3>Nemate kreiranih oglasa! </h3>
+  {{/if}}
 </div>
 {{/if}}

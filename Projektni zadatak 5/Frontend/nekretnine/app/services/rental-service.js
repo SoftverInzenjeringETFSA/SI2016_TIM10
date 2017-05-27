@@ -41,6 +41,21 @@ export default BaseService.extend({
 
     deleteOglasibyID: function(id){
         return this.ajax({ url: "http://localhost:8080/oglasi/deleteOglasi?id="+id, type: "POST"})
+    },
+
+//nece ne znam ovo popraviti, nece da mi objekat kreira vec class
+    getBrojOglasaKorisnika:function(id){
+
+        this.ajax({ url: "http://localhost:8080/oglasi/brojOglasa?id="+id, type: "GET"}).then(function(data) {
+        console.log("data: ");
+        console.log(data);
+        var brojOglasa;
+          console.log("created: ");
+          brojOglasa=data;
+          console.log(brojOglasa);
+
+      });
+      return brojOglasa;
     }
 
 });

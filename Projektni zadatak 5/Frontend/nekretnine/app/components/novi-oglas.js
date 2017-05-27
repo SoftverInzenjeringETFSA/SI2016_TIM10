@@ -47,6 +47,8 @@ export default Ember.Component.extend({
             if(this.validate()){
                 this.sendAction('action',this.oglas);
                 console.log(this.oglas);
+                alert("Kreiran oglas!");
+      					this.set('oglas', '');
                 //this.get('accountService').register(registerData);
 
             }
