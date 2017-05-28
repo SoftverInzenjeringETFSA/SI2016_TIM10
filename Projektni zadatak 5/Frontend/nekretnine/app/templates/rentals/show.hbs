@@ -1,5 +1,6 @@
 
 {{log model.rental}}
+{{log model.zainteresovaniK}}
 
 <div class="jumbo">
 
@@ -29,6 +30,14 @@
     {{#if session.isAuthenticated}}
     {{#if (is-equal model.rental.korisnik.id session.data.authenticated.korisnik.id)}}
     <button  class="btn btn-primary" {{action 'delete'}}>Obrisi oglas</button>
+    <br>
+    <h3> Zainteresovani korisnici </h3>
+    {{#each model.zainteresovaniK as |z|}}
+     {{#link-to 'accounts.show' z.korisnik.id}} {{z.korisnik.ime}} {{/link-to}}
+     <br>
+    {{/each}}
+    {{else}}
+    <button  id="ZK" class="btn btn-primary" {{action 'zainteresovan'}}>Zainteresovan</button>
     {{/if}}
     {{/if}}
 

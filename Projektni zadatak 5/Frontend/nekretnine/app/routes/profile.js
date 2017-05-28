@@ -21,8 +21,10 @@ export default Ember.Route.extend({
    deleteProfile:function(){
     var x = window.confirm("Obrisite profil?");
     if (x == true) {
+    this.get('rentalService').deleteZKbyUserID(this.get('session.data.authenticated.korisnik.id'));
     this.get('rentalService').deleteOglasibyID(this.get('session.data.authenticated.korisnik.id'));
     this.get('accountService').deletebyID(this.get('session.data.authenticated.korisnik.id'));
+
     this.get('session').invalidate();
     this.transitionTo('login');
 } else {

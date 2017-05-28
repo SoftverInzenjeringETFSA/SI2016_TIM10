@@ -7,9 +7,5 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       rentals: this.get('rentalService').all()
     });
-  },
-
-  setupController:function(controller, model){
-    controller.set('rental', model);
-  },
+  }
 });

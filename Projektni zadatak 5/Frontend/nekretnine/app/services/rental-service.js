@@ -58,6 +58,22 @@ export default BaseService.extend({
 
     deleteOglas:function(id){
         return this.ajax({ url: "http://localhost:8080/oglasi/delete/"+id, type: "POST"})
-    }
+    },
+    zainteresovanKorisnik:function(data){
+    return this.ajax({ url: "http://localhost:8080/zainteresovaniKorisnici/create" ,type: "POST", data: JSON.stringify(data)})
+  },
+
+  getZainteresovani: function(id){
+    var zk = []; // ovdje prazan objekat
+    this.ajax({ url: "http://localhost:8080/zainteresovaniKorisnici/allZKOglas?id="+id, type: "GET" }).then(function(data) {
+        data.forEach(function(z) {
+            zk.addObject(z);
+        });
+    });
+    return zk;
+  },
+  deleteZKbyUserID:function(id){
+      return this.ajax({ url: "http://localhost:8080/zainteresovaniKorisnici/deleteZK?id="+id, type: "POST"})
+  }
 
 });
