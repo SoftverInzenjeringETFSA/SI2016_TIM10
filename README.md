@@ -9,7 +9,7 @@
 5. Pokrenuti Wamp
 6. Otvoriti localhost/phpmyadmin
 7. Kreirati bazu naziva tim10
-8. Importovati uključeni tim10.sql fajl
+8. Importovati tim10.sql skriptu
 9. Kreirati usera ,i grantati sve privilegije, sa podacima datim na c2
 10. Otvoriti cmd, cd-ati do ../Frontend/nekretnine
 11. Ukucati komandu npm install
