@@ -22,6 +22,8 @@
 
 3.2.13. Brisanje objavljenih oglasa (korisnik)
 
+3.2.15. Prioritetiziranje reklamiranih oglasa -> bekend (http://localhost:8080/oglasi/reklamni)
+
 3.2.17. Ogranicavanje mogucnosti anonimnih korisnika (Uradjeno je da samo logovani vidi inf o vlasniku oglasa )
 
 ### Funkcionalnosti koje se nisu stigle implementirati:
@@ -37,7 +39,7 @@
 
 3.2.14. Reklamiranje oglasa
 
-3.2.15. Prioritetiziranje reklamiranih oglasa
+3.2.15. Prioritetiziranje reklamiranih oglasa -> frontend
 
 3.2.16. Pracenje posjecenosti oglasa (samo za admine ) 
 
