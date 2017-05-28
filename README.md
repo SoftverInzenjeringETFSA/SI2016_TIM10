@@ -35,7 +35,7 @@
 
 3.2.12. Uredjivanje postojecih oglasa ( korisnik + administrator)
 
-3.2.13. Brisanje objavljenih oglasa (administrator ) -> Slikacno kao brisanje kod korisnika
+3.2.13. Brisanje objavljenih oglasa (administrator ) -> Slicno kao brisanje kod korisnika
 
 3.2.14. Reklamiranje oglasa
 
