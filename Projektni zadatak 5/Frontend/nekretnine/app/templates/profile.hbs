@@ -6,7 +6,8 @@
 {{#if (lte model.brojOglasa.broj 2)}}
 {{#link-to 'advertise' tagName='button' class="btn btn-primary"}} Objavi novi oglas{{/link-to}}
 {{else}}
-<h5>Objavili ste vec tri besplatna oglasa</h5>
+{{#link-to 'advertise' tagName='button' class="btn btn-primary"}} Objavi novi oglas{{/link-to}}
+<h5>Objavili ste vec tri besplatna oglasa, svaki naredni se placa!</h5>
 {{/if}}
 <br> <br>
 <a  href="" class="btn btn-primary" {{action 'deleteProfile'}}>Obrisi profil</a>

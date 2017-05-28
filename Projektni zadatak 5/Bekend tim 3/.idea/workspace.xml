@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c45d72d-ba63-48f3-876a-90c055a8d1fc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Frontend/nekretnine/app/routes/profile.js" afterPath="$PROJECT_DIR$/../Frontend/nekretnine/app/routes/profile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Frontend/nekretnine/app/services/rental-service.js" afterPath="$PROJECT_DIR$/../Frontend/nekretnine/app/services/rental-service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Frontend/nekretnine/app/routes/rentals/show.js" afterPath="$PROJECT_DIR$/../Frontend/nekretnine/app/routes/rentals/show.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Frontend/nekretnine/app/templates/profile.hbs" afterPath="$PROJECT_DIR$/../Frontend/nekretnine/app/templates/profile.hbs" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1081,12 +1082,12 @@
       <workItem from="1495646900650" duration="596000" />
       <workItem from="1495664605300" duration="885000" />
       <workItem from="1495753048994" duration="2125000" />
-      <workItem from="1495799094739" duration="16974000" />
+      <workItem from="1495799094739" duration="17571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41245000" />
+    <option name="totallyTimeSpent" value="41842000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />

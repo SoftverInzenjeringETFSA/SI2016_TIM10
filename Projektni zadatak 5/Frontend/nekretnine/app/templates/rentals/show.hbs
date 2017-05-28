@@ -1,6 +1,8 @@
 
 {{log model.rental}}
+
 <div class="jumbo">
+
   <h2>{{model.rental.nazivOglasa}}</h2>
   {{#if session.isAuthenticated}}
 
@@ -24,8 +26,10 @@
       <span>Price:</span> {{model.rental.cijena}} BAM
     </div>
     <br>
-    {{#if (is-equal model.rental.id session.data.authenticated.korisnik.id)}}
-    <button  class="btn btn-primary" {{action ''}}>Obrisi oglas</button>
+    {{#if session.isAuthenticated}}
+    {{#if (is-equal model.rental.korisnik.id session.data.authenticated.korisnik.id)}}
+    <button  class="btn btn-primary" {{action 'delete'}}>Obrisi oglas</button>
+    {{/if}}
     {{/if}}
 
    </div>

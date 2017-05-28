@@ -54,6 +54,10 @@ export default BaseService.extend({
           console.log(brojOglasa);
       });
       return brojOglasa;
+    },
+
+    deleteOglas:function(id){
+        return this.ajax({ url: "http://localhost:8080/oglasi/delete/"+id, type: "POST"})
     }
 
 });
