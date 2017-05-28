@@ -27,4 +27,9 @@ public interface OglasRepozitorij extends CrudRepository<Oglas, Long> {
     @Query("delete from Oglas where korisnik_id=?")
     @Transactional
     public Integer deleteOglasibyUserId(Long id);
+
+    //pretraga prioritetiziranje oglasa
+    //pretraga po nazivu oglasa, da sadrzi podstring
+    @Query("select o from Oglas o order by placen desc")
+    public List<Oglas> sortbyPlacen();
 }

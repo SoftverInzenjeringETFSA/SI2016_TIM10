@@ -45,4 +45,11 @@ public class OglasController extends BaseRestController<Oglas, OglasRepozitorij>
         if (id == null) return 0;
         return oglasRepozitorij.deleteOglasibyUserId(id);
     }
+
+    //reklamni na vrh
+    @CrossOrigin
+    @GetMapping(path="/reklamni")
+    public @ResponseBody List<Oglas> reklamni() {
+        return oglasRepozitorij.sortbyPlacen();
+    }
 }

@@ -31,6 +31,7 @@
     {{#if (is-equal model.rental.korisnik.id session.data.authenticated.korisnik.id)}}
     <button  class="btn btn-primary" {{action 'delete'}}>Obrisi oglas</button>
     <br>
+    <br>
     <h3> Zainteresovani korisnici </h3>
     {{#each model.zainteresovaniK as |z|}}
      {{#link-to 'accounts.show' z.korisnik.id}} {{z.korisnik.ime}} {{/link-to}}
