@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c45d72d-ba63-48f3-876a-90c055a8d1fc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tim10/models/Oglas.java" afterPath="$PROJECT_DIR$/src/main/java/com/tim10/models/Oglas.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Frontend/nekretnine/app/routes/advertise.js" afterPath="$PROJECT_DIR$/../Frontend/nekretnine/app/routes/advertise.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Frontend/nekretnine/app/routes/rentals/show.js" afterPath="$PROJECT_DIR$/../Frontend/nekretnine/app/routes/rentals/show.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Frontend/nekretnine/app/services/rental-service.js" afterPath="$PROJECT_DIR$/../Frontend/nekretnine/app/services/rental-service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Frontend/nekretnine/app/templates/profile.hbs" afterPath="$PROJECT_DIR$/../Frontend/nekretnine/app/templates/profile.hbs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,17 +23,17 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Oglas.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Oglas.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tim10/models/Oglas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2225">
-              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="825">
+              <caret line="189" column="0" lean-forward="false" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OglasController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OglasController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tim10/contollers/OglasController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="183">
@@ -75,7 +78,7 @@
       <file leaf-file-name="Korisnik.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tim10/models/Korisnik.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1450">
+            <state relative-caret-position="-550">
               <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
@@ -1090,7 +1093,7 @@
     <option name="totallyTimeSpent" value="41842000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1328,7 +1331,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1350,22 +1352,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding>
-            <element signature="e#323#324#0" expanded="false" />
-            <element signature="e#373#374#0" expanded="false" />
-            <element signature="e#547#548#0" expanded="false" />
-            <element signature="e#578#579#0" expanded="false" />
-            <element signature="e#628#629#0" expanded="false" />
-            <element signature="e#668#669#0" expanded="false" />
-            <element signature="e#707#708#0" expanded="false" />
-            <element signature="e#742#743#0" expanded="false" />
-            <element signature="e#798#799#0" expanded="false" />
-            <element signature="e#846#847#0" expanded="false" />
-            <element signature="e#878#879#0" expanded="false" />
-            <element signature="e#906#907#0" expanded="false" />
-            <element signature="e#948#949#0" expanded="false" />
-            <element signature="e#982#983#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1373,7 +1359,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1381,7 +1366,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1389,7 +1373,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1405,7 +1388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1413,9 +1395,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="39" column="35" lean-forward="false" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1469,15 +1448,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tim10/models/Oglas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2225">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="825">
+          <caret line="189" column="0" lean-forward="false" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tim10/models/Korisnik.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1450">
+        <state relative-caret-position="-550">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>

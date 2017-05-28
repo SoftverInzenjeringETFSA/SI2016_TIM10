@@ -24,8 +24,7 @@ console.log('vlasnik:');
 			this.get('rentalService').deleteOglas(rental.id);
 			console.log('brisem');
 			alert('Oglas obrisan!');
-			transitionTo('rentals');
-		}
+			this.transitionTo('rentals');			}
 
 		}
 		else{console.log('niste vlasnik'); alert('Niste vlasnik oglasa!');}
