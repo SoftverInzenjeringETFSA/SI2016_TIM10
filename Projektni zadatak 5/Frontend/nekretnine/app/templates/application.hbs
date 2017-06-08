@@ -8,7 +8,7 @@
     {{/link-to}}
     <div class="links">
       {{#link-to 'about'}}
-        About
+        O nama
       {{/link-to}}
 
       {{#if session.isAuthenticated}}
@@ -16,13 +16,13 @@
         Objavi oglas
       {{/link-to}}
       <a href="/profile">{{ session.data.authenticated.korisnik.korisnickoIme }} </a>
-      <a href="#" {{action "logout" }}> Logout</a>
+      <a href="#" {{action "logout" }}> Odjavi se</a>
       {{else}}
       {{#link-to 'register'}}
-              Register
+              Registracija
       {{/link-to}}
       {{#link-to 'login'}}
-              Login
+              Prijava
       {{/link-to}}
       {{/if}}
     </div>

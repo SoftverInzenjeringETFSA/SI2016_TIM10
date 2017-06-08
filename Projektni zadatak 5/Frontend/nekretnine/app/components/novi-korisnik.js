@@ -9,9 +9,9 @@ accountService: Ember.inject.service(),
 
 
 	validate: function(){
-		let regpassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+		let regpassword = /^(?=.*\d)(?=.*[A-Z])(?!.*[^a-zA-Z0-9@#$^+=])(.{8,15})$/;
     let regime=/^[A-Z][a-z_-]{2,19}$/;
-    let regemail=/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let regemail=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		this.set('errors',DS.Errors.create());
 
 		if(this.get('korisnik.ime')==='' || this.get('korisnik.ime')===undefined || !this.get('korisnik.ime').match(regime)){
@@ -29,7 +29,7 @@ accountService: Ember.inject.service(),
 		if(this.get('korisnik.eMail')==='' || this.get('korisnik.eMail')===undefined || !this.get('korisnik.eMail').match(regemail)){
 			this.get('errors').add('eMail','e-mail mora biti u formatu: example@example.com !!');
 		}
-		
+
 		return this.get('errors.isEmpty');
 	},
 
@@ -40,11 +40,11 @@ accountService: Ember.inject.service(),
             console.log(this.korisnik);
 					alert("Kreiran racun!");
 					this.set('korisnik', '');
-
+					window.location.reload();
             //this.get('accountService').register(registerData);
 
             }
-						
+
 		}
 	},
 });
