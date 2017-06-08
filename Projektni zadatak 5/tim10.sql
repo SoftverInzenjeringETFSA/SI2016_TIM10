@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2017 at 03:54 PM
+-- Generation Time: Jun 08, 2017 at 08:10 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `fotografija` (
   `id` bigint(20) NOT NULL,
-  `link` varchar(255) DEFAULT NULL,
+  `link` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `oglas_id` bigint(20) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -42,24 +42,24 @@ CREATE TABLE `korisnik` (
   `id` bigint(20) NOT NULL,
   `admin` bit(1) DEFAULT NULL,
   `broj_objava` int(11) DEFAULT NULL,
-  `e_mail` varchar(255) DEFAULT NULL,
-  `ime` varchar(255) DEFAULT NULL,
+  `e_mail` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ime` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `is_verified` bit(1) NOT NULL,
-  `korisnicko_ime` varchar(255) DEFAULT NULL,
+  `korisnicko_ime` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `pravo_objave` bit(1) DEFAULT NULL,
-  `prezime` varchar(255) DEFAULT NULL,
-  `sifra` varchar(255) DEFAULT NULL,
+  `prezime` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `sifra` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `role_id` bigint(20) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `korisnik`
 --
 
 INSERT INTO `korisnik` (`id`, `admin`, `broj_objava`, `e_mail`, `ime`, `is_verified`, `korisnicko_ime`, `pravo_objave`, `prezime`, `sifra`, `role_id`) VALUES
-(1, b'0', 0, 'zdragnic@gmail.com', 'Zerina', b'1', 'zdragnic', b'1', 'Dragnic', 'Zerina123', 1),
-(2, b'0', 0, 'sebi@gmail.com', 'Sebi', b'0', 'sebi', b'1', 'Catic', 'Sebi123', 1),
-(3, b'0', 0, 'lejla@gmail.com', 'Lejla', b'0', 'lejla', b'1', 'Dzanko', 'Lejla123', 1);
+(1, b'0', 0, ' zdragnic@gmail.com', 'Zerina', b'1', 'zdragnic', b'1', 'Dragnić', 'Zerina123', 1),
+(2, b'0', 0, 'selsebil@gmil.com', 'Selsebil', b'1', 'scatic', b'1', 'Ćatić', 'Sebi123', 1),
+(3, b'0', 0, 'dzanko@gmail.com', 'Lejla', b'1', 'dzlejla', b'1', 'Džanko', 'Lejla123', 1);
 
 -- --------------------------------------------------------
 
@@ -69,34 +69,31 @@ INSERT INTO `korisnik` (`id`, `admin`, `broj_objava`, `e_mail`, `ime`, `is_verif
 
 CREATE TABLE `oglas` (
   `id` bigint(20) NOT NULL,
-  `adresa` varchar(255) DEFAULT NULL,
+  `adresa` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `aktivan` bit(1) DEFAULT NULL,
   `broj_pregleda` int(11) DEFAULT NULL,
   `broj_prostorija` int(11) DEFAULT NULL,
   `broj_spratova` int(11) DEFAULT NULL,
   `cijena` double DEFAULT NULL,
   `datum_objave` datetime NOT NULL,
-  `grad` varchar(255) DEFAULT NULL,
+  `grad` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `kvadratura` double DEFAULT NULL,
-  `naziv_oglasa` varchar(255) DEFAULT NULL,
+  `naziv_oglasa` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `placen` bit(1) DEFAULT NULL,
-  `slika` varchar(255) DEFAULT NULL,
-  `vrsta_nekrenine` varchar(255) DEFAULT NULL,
-  `vrsta_oglasa` varchar(255) DEFAULT NULL,
+  `slika` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `vrsta_nekrenine` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `vrsta_oglasa` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `korisnik_id` bigint(20) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `oglas`
 --
 
 INSERT INTO `oglas` (`id`, `adresa`, `aktivan`, `broj_pregleda`, `broj_prostorija`, `broj_spratova`, `cijena`, `datum_objave`, `grad`, `kvadratura`, `naziv_oglasa`, `placen`, `slika`, `vrsta_nekrenine`, `vrsta_oglasa`, `korisnik_id`) VALUES
-(1, 'Adresa 1', b'1', 12, 6, 1, 650, '2017-05-28 00:00:00', 'Sarajevo', 67, 'Stan 1', b'0', NULL, 'Stan', 'Izdavanje', 1),
-(2, 'Adresa 2', b'1', 23, 6, 2, 678, '2017-05-28 00:00:00', 'Sarajevo', 55, 'Stan 2', b'0', NULL, 'Stan', 'Izdavanje', 2),
-(3, 'Adresa 3', b'1', 43, 9, 2, 789, '2017-05-28 00:00:00', 'Tuzla', 89, 'Stan 3', b'0', NULL, 'Stan', 'Izdavanje', 3),
-(4, 'Adresa 4', b'1', 2, 6, 2, 766, '2017-05-28 00:00:00', 'Mostar', 56, 'Stan 4', b'0', NULL, 'Stan', 'Izdavanje', 1),
-(5, 'Adresa 5', b'1', 12, 12, 3, 900, '2017-05-28 00:00:00', 'Sarajevo', 100, 'Stan 5', b'0', NULL, 'Stan', 'Izdavanje', 1),
-(6, 'Adresa 6', b'1', 4, 10, 2, 156000, '2017-05-28 00:00:00', 'Sarajevo', 55, 'Stan 6', b'0', NULL, 'Stan', 'Prodaja', 2);
+(1, 'Adresa1', b'1', 12, 3, 1, 1233.4, '2017-06-08 00:00:00', 'Sarajevo', 67, 'Stančić 1', b'0', NULL, 'Stan', 'Izdavanje', 1),
+(2, 'Adresa 2', b'1', 12, 4, 1, 1234.33, '2017-06-08 00:00:00', 'Mostar', 55, 'Stančić 2', b'0', NULL, 'Stan', 'Izdavanje', 3),
+(3, 'Adresa 3', b'1', 12, 3, 1, 133.24, '2017-06-08 00:00:00', 'Sarajevo', 67, 'Stančić 3', b'0', NULL, 'Stan', 'Izdavanje', 2);
 
 -- --------------------------------------------------------
 
@@ -106,8 +103,8 @@ INSERT INTO `oglas` (`id`, `adresa`, `aktivan`, `broj_pregleda`, `broj_prostorij
 
 CREATE TABLE `role` (
   `id` bigint(20) NOT NULL,
-  `role_name` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `role_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `role`
@@ -127,7 +124,15 @@ CREATE TABLE `zainteresovani_korisnik` (
   `id` bigint(20) NOT NULL,
   `korisnik_id` bigint(20) DEFAULT NULL,
   `oglas_id` bigint(20) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `zainteresovani_korisnik`
+--
+
+INSERT INTO `zainteresovani_korisnik` (`id`, `korisnik_id`, `oglas_id`) VALUES
+(1, 1, 2),
+(2, 1, 3);
 
 --
 -- Indexes for dumped tables
@@ -186,7 +191,7 @@ ALTER TABLE `korisnik`
 -- AUTO_INCREMENT for table `oglas`
 --
 ALTER TABLE `oglas`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `role`
 --
@@ -196,7 +201,7 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `zainteresovani_korisnik`
 --
 ALTER TABLE `zainteresovani_korisnik`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

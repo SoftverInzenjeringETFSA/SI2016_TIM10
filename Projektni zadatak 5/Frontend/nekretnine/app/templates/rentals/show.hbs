@@ -8,23 +8,23 @@
   {{#if session.isAuthenticated}}
 
     <div class="detail owner">
-      <span>Owner:</span> {{#link-to 'accounts.show' model.rental.korisnik.id}}{{model.rental.korisnik.ime}} {{/link-to}}
+      <span>Vlasnik:</span> {{#link-to 'accounts.show' model.rental.korisnik.id}}{{model.rental.korisnik.ime}} {{/link-to}}
     </div>
 {{/if}}
     <div class="detail type">
-      <span>Type:</span> {{model.rental.vrstaOglasa}}
+      <span>Tip:</span> {{model.rental.vrstaOglasa}}
     </div>
     <div class="detail location">
-      <span>Squares:</span> {{model.rental.kvadratura}}
+      <span>Kvadratura:</span> {{model.rental.kvadratura}}
     </div>
     <div class="detail bedrooms">
-      <span>Number of bedrooms:</span> {{model.rental.brojProstorija}}
+      <span>Broj prostorija:</span> {{model.rental.brojProstorija}}
     </div>
     <div class="detail location">
-      <span>Location:</span> {{model.rental.grad}}, {{model.rental.adresa}}
+      <span>Grad:</span> {{model.rental.grad}}, {{model.rental.adresa}}
     </div>
     <div class="detail location">
-      <span>Price:</span> {{model.rental.cijena}} BAM
+      <span>Cijena:</span> {{model.rental.cijena}} BAM
     </div>
     <br>
     {{#if session.isAuthenticated}}

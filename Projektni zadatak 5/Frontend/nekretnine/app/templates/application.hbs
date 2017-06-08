@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="menu">
     {{#link-to 'index'}}
@@ -12,7 +13,7 @@
 
       {{#if session.isAuthenticated}}
       {{#link-to 'advertise'}}
-        Advertise
+        Objavi oglas
       {{/link-to}}
       <a href="/profile">{{ session.data.authenticated.korisnik.korisnickoIme }} </a>
       <a href="#" {{action "logout" }}> Logout</a>
