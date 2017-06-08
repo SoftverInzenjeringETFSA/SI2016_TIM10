@@ -35,7 +35,7 @@ export default Ember.Component.extend({
             this.get('errors').add('cijena','Unesite cijenu (format xx.xx)!!');
         }
 
-        if(this.get('oglas.brojProstorija')===undefined || !this.get('oglas.brojProstorija').match(isNumber) ){
+        if(this.get('oglas.brojProstorija')===undefined || (!this.get('oglas.brojProstorija').match(isNumber) && this.get('oglas.brojProstorija')!='') ){
             this.get('errors').add('brojProstorija','Unesite broj prostorija!!');
         }
         if(this.get('oglas.brojSpratova')===undefined || (!this.get('oglas.brojSpratova').match(isNumber) && this.get('oglas.brojSpratova')!='')){
@@ -53,6 +53,8 @@ export default Ember.Component.extend({
                 console.log(this.oglas);
                 alert("Kreiran oglas!");
       					this.set('oglas', '');
+                window.location.reload();
+
                 //this.get('accountService').register(registerData);
 
             }
