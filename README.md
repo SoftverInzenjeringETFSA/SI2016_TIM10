@@ -1,6 +1,24 @@
 # SI2016_TIM10
 ## Nekretnine
 
+### Pokretanje projekta:
+1. Instalirati Intellij
+2. Klonirat sa githuba sve koristeci komandu git clone https://github.com/SoftverInzenjeringETFSA/SI2016_TIM10.git
+3. U intellij izabrati import project, izabrati folder Bekend tim 3
+4. Izabrati import as Maven, next next…
+5. Pokrenuti Wamp
+6. Otvoriti localhost/phpmyadmin
+7. Kreirati bazu naziva tim10
+8. Importovati tim10.sql skriptu
+9. Kreirati usera ,i grantati sve privilegije, sa podacima datim na c2
+10. Otvoriti cmd, cd-ati do ../Frontend/nekretnine
+11. Ukucati komandu npm install
+12. Ukucati komandu  npm nistall -g ember-cli
+13. Pokrenuti aplikaciju u intellij, dodati neke podatke u bazu
+14. U cmd ukucati narednu komandu : ember s
+15. Otvoriti localhost:4200
+
+
 ### Uradjene funkcionalnosti:
 3.2.1. Prijava na sistem
 
@@ -42,5 +60,6 @@
 3.2.15. Prioritetiziranje reklamiranih oglasa -> frontend
 
 3.2.16. Pracenje posjecenosti oglasa (samo za admine ) 
+
 
 
