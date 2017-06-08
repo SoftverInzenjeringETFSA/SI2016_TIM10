@@ -3,6 +3,8 @@ import Ember from 'ember';
 import BaseService from './base-service';
 
 export default BaseService.extend({
+
+
     all: function() {
         var rentals = []; // ovdje prazan objekat
         this.ajax({ url: "http://localhost:8080/oglasi/all", type: "GET" }).then(function(data) {
@@ -26,6 +28,9 @@ export default BaseService.extend({
         return rental;
     },
   register: function(data) {
+    console.log("ID korisnika");
+    console.log(data.korisnik.id);
+    this.ajax({ url: "http://localhost:8080/korisnici/update?id="+data.korisnik.id, type: "POST"})
     return this.ajax({ url: "http://localhost:8080/oglasi/create", type: "POST", data: JSON.stringify(data)})
   },
 
@@ -37,6 +42,17 @@ export default BaseService.extend({
             });
         });
         return rentals;
+    },
+    getBrojObjava: function(id){
+      var brojObjava=Ember.Object.create();
+      this.ajax({ url: "http://localhost:8080/korisnici/brojObjava?id="+id, type: "GET"}).then(function(data) {
+      console.log("data: ");
+      console.log(data);
+        console.log("created: ");
+        brojObjava.set("broj" ,data);
+        console.log(brojObjava);
+    });
+    return brojObjava;
     },
 
     deleteOglasibyID: function(id){
