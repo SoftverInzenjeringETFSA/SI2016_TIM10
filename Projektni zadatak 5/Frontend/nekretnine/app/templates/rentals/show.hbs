@@ -1,6 +1,8 @@
 
 {{log model.rental}}
 {{log model.zainteresovaniK}}
+{{log model.sviZainteresovani}}
+{{log model.vecZaint}}
 
 <div class="jumbo">
 
@@ -34,11 +36,17 @@
     <br>
     <h3> Zainteresovani korisnici </h3>
     {{#each model.zainteresovaniK as |z|}}
-     {{#link-to 'accounts.show' z.korisnik.id}} {{z.korisnik.ime}} {{/link-to}}
+         {{#link-to 'accounts.show' z.korisnik.id}} {{z.korisnik.ime}} {{/link-to}}
      <br>
     {{/each}}
     {{else}}
-    <button  id="ZK" class="btn btn-primary" {{action 'zainteresovan'}}>Zainteresovan</button>
+
+    {{#if (is-equal model.vecZaint.br 0)}}
+    <button id="ZK" class="btn btn-primary" {{action 'zainteresovan'}} >Zainteresovan</button>
+    {{else}}
+    <button id="NZK" class="btn btn-primary" {{action 'nezainteresovan'}} >Nezainteresovan</button>
+    {{/if}}
+
     {{/if}}
     {{/if}}
 

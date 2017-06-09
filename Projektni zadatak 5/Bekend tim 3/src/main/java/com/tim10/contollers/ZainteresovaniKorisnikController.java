@@ -31,4 +31,18 @@ public class ZainteresovaniKorisnikController extends
 		if (id == null) return 0;
 		return zkRepozitorij.deleteZKbyUserId(id);
 	}
+
+	@CrossOrigin
+	@GetMapping(path="/zainteresovan")
+	public @ResponseBody
+	Integer allZKOglas(@RequestParam("idk") Long idk,@RequestParam("ido") Long ido) {
+		return zkRepozitorij.Zainteresovan(idk, ido);
+	}
+
+	@CrossOrigin
+	@RequestMapping(path="/deletezkk", method = RequestMethod.POST)
+	public @ResponseBody Integer deleteZK (@RequestParam("idk") Long idk,@RequestParam("ido") Long ido) {
+		if (idk == null || ido == null) return 0;
+		return zkRepozitorij.deleteZKbyUserIdandOglasID(idk, ido);
+	}
 }
